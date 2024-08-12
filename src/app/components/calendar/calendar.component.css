@@ -1,0 +1,105 @@
+@import url('../../../assets/css/variables.css');
+
+.calendar {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.nav-button {
+    background-color: var(--background-color);
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.nav-icon {
+    color: var(--highlight-color);
+}
+
+.weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-bottom: 10px;
+}
+
+.weekday {
+    color: var(--highlight-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.days {
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day {
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1 / 1;
+}
+
+.month-year {
+    padding: 5px;
+    font-size: 1.2em;
+    color: var(--highlight-color);
+    cursor: pointer;
+}
+
+.select {
+    cursor: pointer;
+}
+
+.nav-button:hover, .month-year:hover {
+    background-color: var(--hover-color);
+    border-radius: 2px;
+}
+
+.select:hover {
+    background-color: var(--hover-color);
+    border-radius: 50%;
+}
+
+.blank {
+    background-color: transparent;
+}
+
+.selected, .selected:hover {
+    background-color: var(--highlight-color);
+    color: var(--text-color);
+    border-radius: 50%;
+}
+
+.years {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.year {
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.year:hover {
+    background-color: var(--hover-color);
+    border-radius: 2px;
+}

@@ -1,0 +1,87 @@
+@import url('../../../assets/css/variables.css');
+
+.reminder {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+.reminder-header {
+    text-align: center;
+    color: var(--highlight-color);
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.month-year {
+    padding: 5px;
+    color: var(--highlight-color);
+    cursor: pointer;
+}
+
+.reminder-header h2 {
+    /* Reset margin that was taken from Angular Material */
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.reminder-header h3 {
+    margin-top: 0px;
+    margin-bottom: 15px;
+}
+
+.reminder-list {
+    width: 100%;
+    overflow-y: auto;
+    background-color: #dbdbdb;
+    flex-grow: 1;
+    border-radius: 6px;
+}
+
+.reminder-list div {
+    padding-left: 10px;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.add-btn {
+    margin-top: 15px;
+}
+
+.round-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--highlight-color);
+    color:white;
+    cursor: pointer;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--highlight-color);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--hover-color);
+}

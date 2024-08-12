@@ -1,0 +1,33 @@
+<mat-card class="calendar">
+    <div class="nav-container">
+        <button mat-icon-button class="nav-button" (click)="prevMonth()">
+            <mat-icon class="nav-icon">keyboard_arrow_left</mat-icon>
+        </button>
+        <span class="month-year" (click)="toggleYearsView()">
+            {{ showYears ? (currentDate | date: 'yyyy') : (currentDate | date: 'MMMM yyyy' | uppercase) }}
+        </span>
+        <button mat-icon-button class="nav-button" (click)="nextMonth()">
+            <mat-icon class="nav-icon">keyboard_arrow_right</mat-icon>
+        </button>
+    </div>
+
+    <div *ngIf="!showYears">
+        <div class="weekdays">
+            <div class="weekday" *ngFor="let day of weekDays">{{ day }}</div>
+        </div>
+        <div class="days">
+            <div *ngFor="let blank of blankDays" class="day blank"></div>
+            <div *ngFor="let day of daysInMonth" class="day select"
+                [ngClass]="{'selected': isSelectedDay(day)}"
+                (click)="selectDay(day)">
+                {{ day }}
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="showYears" class="years">
+        <div class="year" *ngFor="let year of years" (click)="selectYear(year)">
+            {{ year }}
+        </div>
+    </div>
+</mat-card>

@@ -1,0 +1,4 @@
+<div class="container">
+  <app-calendar (selected)="onDateSelected($event)" (cardHeight)="onCardHeight($event)"></app-calendar>
+  <app-reminder #reminder [selectedDate]="selectedDate" ></app-reminder>
+</div>
